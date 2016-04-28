@@ -9,13 +9,13 @@ namespace TestOrganiser.Day
     [Serializable]
     public class _315
     {
-        public Course firstSingle;
-        public Course secondSingle;
-        public Course middleDouble;
-        public Course endDouble;
+        public int firstSingle;
+        public int secondSingle;
+        public int middleDouble;
+        public int endDouble;
 
         public _315() { }
-        public _315(Course first, Course second, Course middle, Course end)
+        public _315(int first, int second, int middle, int end)
         {
             firstSingle = first;
             secondSingle = second;

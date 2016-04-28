@@ -19,7 +19,8 @@ namespace TestOrganiser
 
         private void newButton_Click(object sender, EventArgs e)
         {
-
+            Wizard.WizardBegin wiz = new Wizard.WizardBegin();
+            wiz.Show();
         }
 
         private void openButton_Click(object sender, EventArgs e)

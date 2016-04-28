@@ -9,17 +9,28 @@ namespace TestOrganiser
     [Serializable]
     public class CourseList
     {
-        public Course atar1;
-        public Course atar2;
-        public Course atar3;
-        public Course atar4;
-        public Course atar5;
-        public Course atar6;
-
-        public bool atar7;
-        public Course atarOrRec;
+        public Course course1;
+        public Course course2;
+        public Course course3;
+        public Course course4;
+        public Course course5;
+        public Course course6;
+        public Course course7;
 
         public Course modTime;
         public Course advocacy;
+
+        public CourseList()
+        {
+            course1 = new Course();
+            course2 = new Course();
+            course3 = new Course();
+            course4 = new Course();
+            course5 = new Course();
+            course6 = new Course();
+            course7 = new Course();
+            modTime = new Course();
+            advocacy = new Course();
+        }
     }
 }

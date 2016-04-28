@@ -9,16 +9,16 @@ namespace TestOrganiser.Day
     [Serializable]
     public class _330
     {
-        public Course advocacy;
-        public Course single1;
-        public Course single2;
-        public Course single3;
-        public Course single4;
-        public Course single5;
-        public Course single6;
+        public int advocacy;
+        public int single1;
+        public int single2;
+        public int single3;
+        public int single4;
+        public int single5;
+        public int single6;
 
         public _330 () { }
-        public _330(Course advo, Course s1, Course s2, Course s3, Course s4, Course s5, Course s6)
+        public _330(int advo, int s1, int s2, int s3, int s4, int s5, int s6)
         {
             advocacy = advo;
             single1 = s1;

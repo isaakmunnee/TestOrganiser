@@ -9,14 +9,14 @@ namespace TestOrganiser.Day
     [Serializable]
     public class _310
     {
-        public Course firstDoublePeriod;
-        public Course advocacy;
-        public Course modTime;
-        public Course singleOne;
-        public Course singleTwo;
+        public int firstDoublePeriod;
+        public int advocacy;
+        public int modTime;
+        public int singleOne;
+        public int singleTwo;
 
         public _310() { }
-        public _310(Course d, Course a, Course m, Course s1, Course s2)
+        public _310(int d, int a, int m, int s1, int s2)
         {
             firstDoublePeriod = d;
             advocacy = a;

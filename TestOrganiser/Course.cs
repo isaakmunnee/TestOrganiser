@@ -9,10 +9,21 @@ namespace TestOrganiser
     [Serializable]
     public class Course
     {
+        public enum Type
+        {
+            ATAR = 0x00,
+            Rec = 0x01,
+            Twelvie = 0x02,
+            ModTime = 0x03,
+            Advo = 0x04,
+            Other = 0x05
+        }
+
         public string classCode;
         public string ClassName;
         public string TeacherName;
         public string ClassRoom;
+        public Type type;
 
         public Course()
         {
@@ -20,14 +31,16 @@ namespace TestOrganiser
             ClassName = "";
             TeacherName = "";
             ClassRoom = "";
+            type = Type.ATAR;
         }
 
-        public Course(string code, string name, string teacher, string room)
+        public Course(string code, string name, string teacher, string room, Type t)
         {
             classCode = code;
             ClassName = name;
             TeacherName = teacher;
             ClassRoom = room;
+            type = t;
         }
     }
 }

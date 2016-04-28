@@ -9,8 +9,8 @@ namespace TestOrganiser
     [Serializable]
     public class Semester
     {
-        public Week weekA;
-        public Week weekB;
+        public Week weekA = new Week();
+        public Week weekB = new Week();
 
         public Semester() { }
         public Semester(Week a, Week b)
