@@ -35,6 +35,7 @@
             this.fromScratchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.withCurrentCoursesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.WizardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.daysToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,7 +56,6 @@
             this.singleWeekViewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dayViewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.currentClassToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dayTenPeriod6 = new TestOrganiser.WeekPanelEntry();
             this.dayNinePeriod6 = new TestOrganiser.WeekPanelEntry();
             this.dayEightPeriod4 = new TestOrganiser.WeekPanelEntry();
@@ -269,6 +269,13 @@
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
+            // saveToolStripMenuItem
+            // 
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.saveToolStripMenuItem.Text = "Save";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
+            // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -281,7 +288,7 @@
             // WizardToolStripMenuItem
             // 
             this.WizardToolStripMenuItem.Name = "WizardToolStripMenuItem";
-            this.WizardToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.WizardToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.WizardToolStripMenuItem.Text = "Wizard";
             this.WizardToolStripMenuItem.Click += new System.EventHandler(this.WizardToolStripMenuItem_Click);
             // 
@@ -291,7 +298,7 @@
             this.weekAToolStripMenuItem,
             this.weekBToolStripMenuItem});
             this.daysToolStripMenuItem.Name = "daysToolStripMenuItem";
-            this.daysToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.daysToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.daysToolStripMenuItem.Text = "Days";
             // 
             // weekAToolStripMenuItem
@@ -422,13 +429,6 @@
             this.currentClassToolStripMenuItem.Name = "currentClassToolStripMenuItem";
             this.currentClassToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.currentClassToolStripMenuItem.Text = "Current Class";
-            // 
-            // saveToolStripMenuItem
-            // 
-            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.saveToolStripMenuItem.Text = "Save";
-            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // dayTenPeriod6
             // 
@@ -950,6 +950,8 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximumSize = new System.Drawing.Size(1200, 700);
+            this.MinimumSize = new System.Drawing.Size(1200, 700);
             this.Name = "Double_Week_View";
             this.Text = "Double Week View";
             this.Load += new System.EventHandler(this.Double_Week_View_Load);

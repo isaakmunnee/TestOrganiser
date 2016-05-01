@@ -8,10 +8,25 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TestOrganiser</RootNamespace>
-    <AssemblyName>TestOrganiser</AssemblyName>
+    <AssemblyName>Perth Modern Organiser</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,6 +47,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>TestOrganiser.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>perth_modernian_rIb_icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -50,6 +71,20 @@
     <Compile Include="315.cs" />
     <Compile Include="330.cs" />
     <Compile Include="AppWideInfo.cs" />
+    <Compile Include="Assignment.cs" />
+    <Compile Include="ClassInfo.cs" />
+    <Compile Include="ClassView\AssignmentEntry.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ClassView\AssignmentEntry.Designer.cs">
+      <DependentUpon>AssignmentEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassView\ClassView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassView\ClassView.Designer.cs">
+      <DependentUpon>ClassView.cs</DependentUpon>
+    </Compile>
     <Compile Include="CourseList.cs" />
     <Compile Include="DoubleWeekView\Double Week View.cs">
       <SubType>Form</SubType>
@@ -105,6 +140,12 @@
     <Compile Include="Wizard\WizardBegin.Designer.cs">
       <DependentUpon>WizardBegin.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ClassView\AssignmentEntry.resx">
+      <DependentUpon>AssignmentEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassView\ClassView.resx">
+      <DependentUpon>ClassView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DoubleWeekView\Double Week View.resx">
       <DependentUpon>Double Week View.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,6 +192,25 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon1.ico" />
+    <Content Include="perth_modernian_rIb_icon.ico" />
+    <Content Include="pmod.jpg" />
+    <Content Include="pmod_vG1_icon.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

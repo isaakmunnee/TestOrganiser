@@ -25,6 +25,10 @@ namespace TestOrganiser
         public string ClassRoom;
         public Type type;
 
+        public string courseColor;
+
+        public ClassInfo.ClassInfo classInfo;
+
         public Course()
         {
             classCode = "";
@@ -32,6 +36,8 @@ namespace TestOrganiser
             TeacherName = "";
             ClassRoom = "";
             type = Type.ATAR;
+            courseColor = "Control";
+            classInfo = new ClassInfo.ClassInfo();
         }
 
         public Course(string code, string name, string teacher, string room, Type t)
@@ -41,6 +47,8 @@ namespace TestOrganiser
             TeacherName = teacher;
             ClassRoom = room;
             type = t;
+            courseColor = "Control";
+            classInfo = new ClassInfo.ClassInfo();
         }
     }
 }

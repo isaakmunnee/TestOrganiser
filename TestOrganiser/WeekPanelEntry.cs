@@ -27,11 +27,15 @@ namespace TestOrganiser
             name.Text = (info == null) ? "null" : info.ClassName;
             teacher.Text = (info == null) ? "null" : info.TeacherName;
             room.Text = (info == null) ? "null" : info.ClassRoom;
+            tableLayoutPanel1.BackColor = Color.FromName(info.courseColor ?? "Control");
         }
 
-        private void name_Click(object sender, EventArgs e)
+        private void openClassView(object sender, EventArgs e)
         {
-
+            ClassView.ClassView cv = new ClassView.ClassView();
+            cv.thisCourse = AppWideInfo.courseArray[classCode];
+            cv.courseCode = classCode;
+            cv.ShowDialog();
         }
     }
 }

@@ -29,14 +29,15 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.teacher = new System.Windows.Forms.Label();
             this.room = new System.Windows.Forms.Label();
             this.name = new System.Windows.Forms.Label();
-            this.teacher = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.Controls.Add(this.teacher, 0, 1);
@@ -51,25 +52,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(115, 90);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // room
-            // 
-            this.room.AutoSize = true;
-            this.room.Location = new System.Drawing.Point(3, 60);
-            this.room.Name = "room";
-            this.room.Size = new System.Drawing.Size(35, 13);
-            this.room.TabIndex = 2;
-            this.room.Text = "label1";
-            // 
-            // name
-            // 
-            this.name.AutoSize = true;
-            this.name.Location = new System.Drawing.Point(3, 0);
-            this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(35, 13);
-            this.name.TabIndex = 4;
-            this.name.Text = "label1";
-            this.name.Click += new System.EventHandler(this.name_Click);
+            this.tableLayoutPanel1.Click += new System.EventHandler(this.openClassView);
             // 
             // teacher
             // 
@@ -79,6 +62,27 @@
             this.teacher.Size = new System.Drawing.Size(35, 13);
             this.teacher.TabIndex = 5;
             this.teacher.Text = "label1";
+            this.teacher.Click += new System.EventHandler(this.openClassView);
+            // 
+            // room
+            // 
+            this.room.AutoSize = true;
+            this.room.Location = new System.Drawing.Point(3, 60);
+            this.room.Name = "room";
+            this.room.Size = new System.Drawing.Size(35, 13);
+            this.room.TabIndex = 2;
+            this.room.Text = "label1";
+            this.room.Click += new System.EventHandler(this.openClassView);
+            // 
+            // name
+            // 
+            this.name.AutoSize = true;
+            this.name.Location = new System.Drawing.Point(3, 0);
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(35, 13);
+            this.name.TabIndex = 4;
+            this.name.Text = "label1";
+            this.name.Click += new System.EventHandler(this.openClassView);
             // 
             // WeekPanelEntry
             // 
