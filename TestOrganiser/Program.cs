@@ -16,7 +16,22 @@ namespace TestOrganiser
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            if (FileHandling.SaveFileExists())
+            {
+                DoubleWeekView.Double_Week_View dwv = new DoubleWeekView.Double_Week_View();
+                AppWideInfo.doubleWeekView = dwv;
+
+                FileHandling.Load();
+
+
+                Application.Run(dwv);
+            }
+            else
+            {
+                DoubleWeekView.Double_Week_View dwv = new DoubleWeekView.Double_Week_View();
+                AppWideInfo.doubleWeekView = dwv;
+                Application.Run(dwv);
+            }
         }
     }
 }

@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 
 namespace TestOrganiser
@@ -24,7 +25,7 @@ namespace TestOrganiser
 
         public static void Load()
         {
-            if(File.Exists(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "semester.dat")))
+            if(!File.Exists(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "semester.dat")))
             {
                 AppWideInfo.openSemester = new Semester();
                 AppWideInfo.courseList = new CourseList();
@@ -36,7 +37,11 @@ namespace TestOrganiser
             sd = (SaveData)bf.Deserialize(file);
             AppWideInfo.openSemester = sd.sem;
             AppWideInfo.courseList = sd.cl;
+            AppWideInfo.UpdateCourseArray();
             file.Close();
+
+            if (AppWideInfo.doubleWeekView != null)
+                AppWideInfo.doubleWeekView.LoadInfo();
         }
 
         public static bool SaveFileExists()

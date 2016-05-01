@@ -17,6 +17,11 @@ namespace TestOrganiser.Wizard
             InitializeComponent();
         }
 
+        public void SetupForEditing()
+        {
+            label1.Text = "Edit Semester!";
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             CourseEdit one = new CourseEdit();
@@ -27,7 +32,10 @@ namespace TestOrganiser.Wizard
 
         private void button10_Click(object sender, EventArgs e)
         {
-            
+            CourseEdit one = new CourseEdit();
+            one.thisCourse = AppWideInfo.courseList.privateStudy;
+            one.courseNumber = -1;
+            one.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -104,12 +112,15 @@ namespace TestOrganiser.Wizard
             _330_Edit ed = new _330_Edit();
             ed.dayNumber = 0;
             ed.SetAllTheCourses();
-            ed.Show();
+            ed.ShowDialog();
         }
 
         private void button13_Click(object sender, EventArgs e)
         {
-
+            _315_Edit ed = new _315_Edit();
+            ed.dayNumber = 1;
+            ed.SetAllTheCourses();
+            ed.ShowDialog();
         }
 
         private void button19_Click(object sender, EventArgs e)
@@ -117,7 +128,7 @@ namespace TestOrganiser.Wizard
             _330_Edit ed = new _330_Edit();
             ed.dayNumber = 4;
             ed.SetAllTheCourses();
-            ed.Show();
+            ed.ShowDialog();
         }
 
         private void button12_Click(object sender, EventArgs e)
@@ -125,7 +136,7 @@ namespace TestOrganiser.Wizard
             _330_Edit ed = new _330_Edit();
             ed.dayNumber = 5;
             ed.SetAllTheCourses();
-            ed.Show();
+            ed.ShowDialog();
         }
 
         private void button20_Click(object sender, EventArgs e)
@@ -133,7 +144,59 @@ namespace TestOrganiser.Wizard
             _330_Edit ed = new _330_Edit();
             ed.dayNumber = 9;
             ed.SetAllTheCourses();
-            ed.Show();
+            ed.ShowDialog();
+        }
+
+        private void WizardBegin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            _315_Edit ed = new _315_Edit();
+            ed.dayNumber = 3;
+            ed.SetAllTheCourses();
+            ed.ShowDialog();
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            _315_Edit ed = new _315_Edit();
+            ed.dayNumber = 6;
+            ed.SetAllTheCourses();
+            ed.ShowDialog();
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            _315_Edit ed = new _315_Edit();
+            ed.dayNumber = 8;
+            ed.SetAllTheCourses();
+            ed.ShowDialog();
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            _310_Edit ed = new _310_Edit();
+            ed.dayNumber = 2;
+            ed.SetAllTheCourses();
+            ed.ShowDialog();
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            _310_Edit ed = new _310_Edit();
+            ed.dayNumber = 7;
+            ed.SetAllTheCourses();
+            ed.ShowDialog();
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+            FileHandling.Save();
+            AppWideInfo.doubleWeekView.Show();
+            AppWideInfo.doubleWeekView.LoadInfo();
         }
     }
 }

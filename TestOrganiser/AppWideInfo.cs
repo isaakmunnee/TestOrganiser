@@ -11,9 +11,11 @@ namespace TestOrganiser
         public static Semester openSemester = new Semester();
         public static CourseList courseList = new CourseList();
 
-        public static Course[] courseArray = new Course[9];
+        public static Course[] courseArray = new Course[10];
 
-        public static string[] courseNames = new string[9];
+        public static string[] courseNames = new string[10];
+
+        public static DoubleWeekView.Double_Week_View doubleWeekView;
 
         public static void SetCourse (Course c, int i)
         {
@@ -46,11 +48,17 @@ namespace TestOrganiser
                 case 11:
                     courseList.modTime = c;
                     break;
+                case -1:
+                    courseList.privateStudy = c;
+                    break;
                 default:
                     Console.Write("Wrong case for static course list setting");
                     break;
             }
             UpdateCourseArray();
+
+            if (doubleWeekView != null)
+                doubleWeekView.LoadInfo();
         }
 
         public static void SetDay(Object d, int i)
@@ -91,6 +99,9 @@ namespace TestOrganiser
                     Console.Write("Wrong case for static day setting");
                     break;
             }
+
+            if (doubleWeekView != null)
+                doubleWeekView.LoadInfo();
         }
 
         public static object GetDay(int i)
@@ -144,11 +155,22 @@ namespace TestOrganiser
             courseArray[6] = courseList.course7;
             courseArray[7] = courseList.advocacy;
             courseArray[8] = courseList.modTime;
+            courseArray[9] = courseList.privateStudy;
 
             for (int i = 0; i < courseArray.Length; i++)
             {
                 courseNames[i] = courseArray[i].ClassName;
             }
         }
+
+        public static void Clear()
+        {
+        openSemester = new Semester();
+        courseList = new CourseList();
+
+        courseArray = new Course[10];
+
+        courseNames = new string[10];
+    }
     }
 }

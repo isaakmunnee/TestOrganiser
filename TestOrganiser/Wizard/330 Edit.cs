@@ -63,5 +63,25 @@ namespace TestOrganiser.Wizard
             AppWideInfo.SetDay(day, dayNumber);
             this.Close();
         }
+
+        private void _330_Edit_Load(object sender, EventArgs e)
+        {
+            switch (dayNumber)
+            {
+                case 0:
+                    label1.Text = "Day: Monday";
+                    break;
+                case 4:
+                    label1.Text = "Day: Friday";
+                    break;
+                case 5:
+                    goto case 0;
+                case 9:
+                    goto case 4;
+                default:
+                    label1.Text = "error, close and try again";
+                    break;
+            }
+        }
     }
 }

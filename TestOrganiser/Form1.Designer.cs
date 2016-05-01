@@ -31,6 +31,7 @@
             this.newButton = new System.Windows.Forms.Button();
             this.openButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // newButton
@@ -47,9 +48,9 @@
             // 
             this.openButton.Location = new System.Drawing.Point(12, 52);
             this.openButton.Name = "openButton";
-            this.openButton.Size = new System.Drawing.Size(368, 34);
+            this.openButton.Size = new System.Drawing.Size(187, 34);
             this.openButton.TabIndex = 1;
-            this.openButton.Text = "Open";
+            this.openButton.Text = "Load";
             this.openButton.UseVisualStyleBackColor = true;
             this.openButton.Click += new System.EventHandler(this.openButton_Click);
             // 
@@ -62,11 +63,22 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Status:";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(205, 52);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(175, 34);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Open";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(392, 111);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.openButton);
             this.Controls.Add(this.newButton);
@@ -82,6 +94,7 @@
         private System.Windows.Forms.Button newButton;
         private System.Windows.Forms.Button openButton;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }
 

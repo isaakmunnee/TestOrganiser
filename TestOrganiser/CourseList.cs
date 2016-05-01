@@ -19,6 +19,7 @@ namespace TestOrganiser
 
         public Course modTime;
         public Course advocacy;
+        public Course privateStudy;
 
         public CourseList()
         {
@@ -31,6 +32,7 @@ namespace TestOrganiser
             course7 = new Course();
             modTime = new Course();
             advocacy = new Course();
+            privateStudy = new Course();
         }
     }
 }

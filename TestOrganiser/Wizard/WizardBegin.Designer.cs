@@ -32,7 +32,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -44,6 +43,7 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
@@ -56,10 +56,11 @@
             this.button19 = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
             this.button21 = new System.Windows.Forms.Button();
+            this.button22 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -103,17 +104,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Courses";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.tableLayoutPanel2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(276, 179);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Days";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel1
             // 
@@ -248,9 +238,20 @@
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(129, 31);
             this.button10.TabIndex = 9;
-            this.button10.Text = "You <3";
+            this.button10.Text = "Private Study";
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.tableLayoutPanel2);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(276, 179);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Days";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel2
             // 
@@ -321,6 +322,7 @@
             this.button14.TabIndex = 3;
             this.button14.Text = "Week B Tuesday";
             this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // button15
             // 
@@ -331,6 +333,7 @@
             this.button15.TabIndex = 4;
             this.button15.Text = "Week A Wednesday";
             this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // button16
             // 
@@ -341,6 +344,7 @@
             this.button16.TabIndex = 5;
             this.button16.Text = "Week B Wednesday";
             this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
             // button17
             // 
@@ -351,6 +355,7 @@
             this.button17.TabIndex = 6;
             this.button17.Text = "Week A Thursday";
             this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
             // button18
             // 
@@ -361,6 +366,7 @@
             this.button18.TabIndex = 7;
             this.button18.Text = "Week B Thursday";
             this.button18.UseVisualStyleBackColor = true;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
             // 
             // button19
             // 
@@ -386,19 +392,30 @@
             // 
             // button21
             // 
-            this.button21.Location = new System.Drawing.Point(151, 15);
+            this.button21.Location = new System.Drawing.Point(152, 7);
             this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(125, 26);
+            this.button21.Size = new System.Drawing.Size(125, 22);
             this.button21.TabIndex = 3;
             this.button21.Text = "Save!";
             this.button21.UseVisualStyleBackColor = true;
             this.button21.Click += new System.EventHandler(this.button21_Click);
+            // 
+            // button22
+            // 
+            this.button22.Location = new System.Drawing.Point(152, 29);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(125, 22);
+            this.button22.TabIndex = 4;
+            this.button22.Text = "Finish";
+            this.button22.UseVisualStyleBackColor = true;
+            this.button22.Click += new System.EventHandler(this.button22_Click);
             // 
             // WizardBegin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Controls.Add(this.button22);
             this.Controls.Add(this.button21);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label2);
@@ -407,10 +424,11 @@
             this.MinimumSize = new System.Drawing.Size(300, 300);
             this.Name = "WizardBegin";
             this.Text = "Wizard";
+            this.Load += new System.EventHandler(this.WizardBegin_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -447,5 +465,6 @@
         private System.Windows.Forms.Button button19;
         private System.Windows.Forms.Button button20;
         private System.Windows.Forms.Button button21;
+        private System.Windows.Forms.Button button22;
     }
 }

@@ -30,7 +30,14 @@ namespace TestOrganiser
                 label1.Text = "Status: Error, no save file found.";
                 return;
             }
-            FileHandling.Save();
+            FileHandling.Load();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DoubleWeekView.Double_Week_View dwv = new DoubleWeekView.Double_Week_View();
+            dwv.LoadInfo();
+            dwv.Show();
         }
     }
 }
